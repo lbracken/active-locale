@@ -1,0 +1,25 @@
+{
+  "name": "activeLocale",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "latest",
+    "morgan": "latest",
+    "compression": "latest",
+    "body-parser": "latest",
+    "method-override": "latest",
+    "express-session": "latest",
+    "ejs": "latest",
+    "connect-flash" : "latest",
+    "mongoose": "latest",
+    "passport" : "latest",
+    "passport-local" : "latest"
+  },
+  "description": "Simple, temporary location sharing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : "https://github.com/lbracken/active-locale",
+  "author": "levi.bracken@gmail.com",
+  "license": "MIT"
+}
