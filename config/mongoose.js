@@ -12,7 +12,7 @@ module.exports = function() {
 	});
 
 	// Required Models
-	//require('../app/models/...');
+	require('../app/models/user.server.model.js');
 
 	return db;
 };

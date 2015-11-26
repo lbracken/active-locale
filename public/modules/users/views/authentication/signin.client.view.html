@@ -1,0 +1,25 @@
+<section data-ng-controller="AuthenticationController">
+
+	<h3>Login</h3>
+
+	<div data-ng-show="error">
+		<strong data-ng-bind="error"></strong>
+	</div>
+
+	<form data-ng-submit="signin()" autocomplete="off">
+		<div>
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" data-ng-model="credentials.username" placeholder="Username">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" data-ng-model="credentials.password" placeholder="Password">
+		</div>
+
+		<div>
+			<button type="submit">Login</button>&nbsp; or&nbsp;
+			<a href="/#!/signup">Sign up</a>
+		</div> 	
+	</form>
+	
+</section>

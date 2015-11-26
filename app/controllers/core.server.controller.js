@@ -1,6 +1,6 @@
 exports.index = function(req, res) {
-	// Render the index EJS template
-	res.render('index.server.view.ejs', {
-		user: JSON.stringify(req.user)
+	res.render('index', {
+		user: req.user || null,
+		request: req
 	});
 };

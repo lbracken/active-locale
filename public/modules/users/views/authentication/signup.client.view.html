@@ -1,0 +1,33 @@
+<section data-ng-controller="AuthenticationController">
+
+	<h3>Sign Up</h3>
+
+	<div data-ng-show="error">
+		<strong data-ng-bind="error"></strong>
+	</div>
+
+
+	<form name="userForm" data-ng-submit="signup()" novalidate autocomplete="off">
+		<div>
+			<label for="firstName">First Name</label>
+			<input type="text" required id="firstName" name="firstName" data-ng-model="credentials.firstName" placeholder="First Name">
+		</div>
+		<div>
+			<label for="lastName">Last Name</label>
+			<input type="text" id="lastName" name="lastName" data-ng-model="credentials.lastName" placeholder="Last Name">
+		</div>
+		<div>
+			<label for="username">Email</label>
+			<input type="text" id="username" name="username" data-ng-model="credentials.username" placeholder="Email">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" data-ng-model="credentials.password" placeholder="Password">
+		</div>
+		<div>
+			<button type="submit">Sign up</button>&nbsp; or&nbsp;
+			<a href="/#!/signin">Login</a>
+		</div> 	
+	</form>
+
+</section>

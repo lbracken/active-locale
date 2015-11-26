@@ -8,8 +8,9 @@
     "body-parser": "latest",
     "method-override": "latest",
     "express-session": "latest",
-    "ejs": "latest",
-    "connect-flash" : "latest",
+    "consolidate": "latest",    
+    "lodash" : "latest",
+    "swig": "latest",
     "mongoose": "latest",
     "passport" : "latest",
     "passport-local" : "latest"

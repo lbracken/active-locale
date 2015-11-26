@@ -5,8 +5,8 @@ var config = require('./config'),
 	bodyParser = require('body-parser'),
 	methodOverride = require('method-override'),
 	session = require('express-session'),
-	flash = require('connect-flash');
-	//passport = require('passport');
+	consolidate = require('consolidate'),
+	passport = require('passport');
 
 module.exports = function() {
 	var app = express();
@@ -32,15 +32,19 @@ module.exports = function() {
 		secret : config.sessionSecret
 	}));
 
-	app.set('views', './app/views');
-	app.set('view engine', 'ejs');
+	// Set swig as the template engine
+	app.engine('server.view.html', consolidate['swig']);
 
-	app.use(flash());
-	//app.use(passport.initialize());
-	//app.use(passport.session());
+	// Set views path and view engine
+	app.set('view engine', 'server.view.html');
+	app.set('views', './app/views');
+
+	app.use(passport.initialize());
+	app.use(passport.session());
 
 	// Required Routes
 	require('../app/routes/core.server.routes.js')(app);
+	require('../app/routes/users.server.routes.js')(app);
 
 	app.use(express.static('./public'));
 	return app;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns:ng="http://angularjs.org">
+<head>
+	<title>{{title}}</title>
+	<meta name="description" content="Simple, Temporary Location Sharing">
+
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+</head>
+
+
+<body>
+	<section class="content">
+		<section class="container">
+			{% block content %}{% endblock %}
+		</section>
+	</section>
+
+	<!--Embed the User object in the page-->
+	<script type="text/javascript">
+		var user = {{ user | json | safe }};
+	</script>
+
+	<!-- TOOD: 
+	   * Replace with minimized CDN versions
+	   * Figure out better way to include all of these JS files
+	-->
+	<script src="/lib/angular/angular.js"></script>
+	<script src="/lib/angular-resource/angular-resource.js"></script>
+	<script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>		
+
+	<script src="/config.js"></script>
+	<script src="/application.js"></script>
+
+	<!-- Core Module -->
+	<script src="/modules/core/core.client.module.js"></script>
+	<script src="/modules/core/config/core.client.routes.js"></script>
+	<script src="/modules/core/controllers/home.client.controller.js"></script>
+
+	<!-- Users Module -->
+	<script src="/modules/users/users.client.module.js"></script>
+	<script src="/modules/users/config/users.client.config.js"></script>
+	<script src="/modules/users/config/users.client.routes.js"></script>
+	<script src="/modules/users/controllers/authentication.client.controller.js"></script>
+	<script src="/modules/users/controllers/settings.client.controller.js"></script>
+	<script src="/modules/users/services/authentication.client.service.js"></script>
+	<script src="/modules/users/services/users.client.service.js"></script>
+  
+</body>
+</html>
