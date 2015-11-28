@@ -1,0 +1,14 @@
+<!-- To statisfy MDL some parts of the drawer need to be declared in layout.server.view.html.
+     Otherwise some layout elements will break when there are additional nested divs, etc -->
+<nav class="mdl-navigation">
+
+	<!-- When no user is logged in... -->
+	<a class="mdl-navigation__link" ng-hide="authentication.user" href="/#!/signup">Sign Up</a>
+	<a class="mdl-navigation__link" ng-hide="authentication.user" href="/#!/signin">Log In</a>
+
+	<!-- When a user is logged in... -->
+	<a class="mdl-navigation__link" ng-show="authentication.user" href="/#!/settings/profile">{{authentication.user.username}}</a>
+	<a class="mdl-navigation__link" ng-show="authentication.user" href="/auth/signout">Sign Out</a>
+
+	<div class="separator"></div>
+</nav>
