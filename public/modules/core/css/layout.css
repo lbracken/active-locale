@@ -66,3 +66,22 @@ a img{
   margin: 8px 0;
 }
 
+/**** Mobile layout ****/
+@media (max-width: 420px) {
+
+  .mdl-layout__header-nav-links {
+    /* Don't show top-right nav links on mobile */
+    display: none;
+  }
+   
+}
+
+/**** Tablet layout ****/
+@media (min-width: 421px) and (max-width: 800px) {
+   
+}
+
+/**** Desktop layout ****/
+@media (min-width: 801px) {
+ 
+}
