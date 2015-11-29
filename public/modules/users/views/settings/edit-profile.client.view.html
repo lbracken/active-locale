@@ -1,27 +1,32 @@
-<section data-ng-controller="SettingsController">
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>
+<section class="mdl-cell mdl-cell--4-col" data-ng-controller="SettingsController">
 
-	<h1>Edit Profile</h1>
-				
-	<div data-ng-show="success">
-		<strong>Profile Saved Successfully</strong>
-	</div>
-	<div data-ng-show="error">
-		<strong data-ng-bind="error"></strong>
-	</div>	
+	<h3>Profile</h3>	
 
 	<form name="userForm" data-ng-submit="updateUserProfile(userForm.$valid)" autocomplete="off">
 
-		<div>
-			<label for="firstName">First Name</label>
-			<input type="text" id="firstName" name="firstName" data-ng-model="user.firstName" placeholder="First Name">
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" id="firstName" name="firstName" data-ng-model="user.firstName">
+			<label class="mdl-textfield__label" for="firstName">First Name</label>
 		</div>
-		<div>
-			<label for="lastName">Last Name</label>
-			<input type="text" id="lastName" name="lastName" data-ng-model="user.lastName" placeholder="Last Name">
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" id="lastName" name="lastName" data-ng-model="user.lastName">
+			<label class="mdl-textfield__label" for="lastName">Last Name</label>
 		</div>
+
+		<br/><br/>
 		<div>
-			<button type="submit">Save Profile</button>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit">Update Profile</button>
 		</div>
 	</form>
 
+	<div data-ng-show="success">
+		<h6>Profile Saved Successfully</h6>
+	</div>
+	<div data-ng-show="error">
+		<h6 data-ng-bind="error"></h6>
+	</div>	
+
 </section>
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>

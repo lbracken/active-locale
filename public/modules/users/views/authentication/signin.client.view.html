@@ -1,25 +1,31 @@
-<section data-ng-controller="AuthenticationController">
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>
+<section class="mdl-cell mdl-cell--4-col" data-ng-controller="AuthenticationController">
 
-	<h3>Login</h3>
-
-	<div data-ng-show="error">
-		<strong data-ng-bind="error"></strong>
-	</div>
+	<h3>Log In</h3>
 
 	<form data-ng-submit="signin()" autocomplete="off">
-		<div>
-			<label for="username">Username</label>
-			<input type="text" id="username" name="username" data-ng-model="credentials.username" placeholder="Username">
-		</div>
-		<div>
-			<label for="password">Password</label>
-			<input type="password" id="password" name="password" data-ng-model="credentials.password" placeholder="Password">
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="email" id="username" name="username" data-ng-model="credentials.username" autofocus>
+			<label class="mdl-textfield__label" for="username">Email</label>
 		</div>
 
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="password" id="password" name="password" data-ng-model="credentials.password">
+			<label class="mdl-textfield__label" for="password">Password</label>
+		</div>
+
+		<br/><br/>
 		<div>
-			<button type="submit">Login</button>&nbsp; or&nbsp;
-			<a href="/#!/signup">Sign up</a>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit">Log In</button>
+			&nbsp; or&nbsp;
+			<a href="/#!/signup">Sign Up</a>
 		</div> 	
 	</form>
-	
+
+	<div data-ng-show="error">
+		<h6 data-ng-bind="error"></h6>
+	</div>
+
 </section>
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>

@@ -28,6 +28,9 @@ a img{
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
+.mdl-grid {
+}
+
 .mdl-layout__header {
   overflow: visible;
   background-color: #424242;
@@ -62,3 +65,4 @@ a img{
   background-color: #dcdcdc;
   margin: 8px 0;
 }
+
