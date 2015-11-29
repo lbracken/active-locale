@@ -67,13 +67,16 @@ a img{
 }
 
 /**** Mobile layout ****/
-@media (max-width: 420px) {
+@media (max-width: 420px) , (max-height: 420px) {
 
   .mdl-layout__header-nav-links {
     /* Don't show top-right nav links on mobile */
     display: none;
   }
-   
+
+  .home-header {
+    background-color: #E0E0E0;
+  }
 }
 
 /**** Tablet layout ****/
