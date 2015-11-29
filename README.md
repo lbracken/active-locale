@@ -9,10 +9,12 @@ Ensure your development machine has the following requirements installed...
 
 ## Install dependencies...
 Use NPM and Bower to grab required dependencies...
-$ npm install
-$ bower install
+
+	$ npm install
+	$ bower install
 
 ## Running the application
-$ node server.js
+
+	$ node server.js
 
 Much of this code is based on examples from the book 'MEAN Web Development' and from examples on meanjs.org.
