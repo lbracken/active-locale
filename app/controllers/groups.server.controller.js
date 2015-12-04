@@ -119,18 +119,6 @@ exports.delete = function(req, res) {
  * Group authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-
-	// >>>>>>>>
-	// Sanity check that the user is logged in...
-	// TODO: This could get removed once `users.requiresLogin`
-	//       is passed as middleware to app.param(:groupId)
-	if (!req.user) {
-		return res.status(401).send({
-			message: "Authentication required..."
-		});
-	}
-	// <<<<<<<
-
 	if (req.group.owner != req.user.id) {
 		return res.status(403).send({
 			message: "Not authorized for operation on group."
