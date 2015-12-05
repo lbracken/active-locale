@@ -48,5 +48,22 @@ module.exports = function() {
 	require('../app/routes/groups.server.routes.js')(app);
 
 	app.use(express.static('./public'));
+
+	// Setup an custom error handler
+	app.use(function(err, req, res, next) {
+		// If the error object doesn't exist...
+		if (!err) return next();
+
+		// Log the error, then show error page
+		console.error(err.stack);
+		res.status(500).render('500', {});
+	});
+
+	// If no other middleware has responsed to the request
+	// by this point, then return 404 Not Found.
+	app.use(function(req, res) {
+		res.status(404).render('404', {});
+	});
+
 	return app;
 }
