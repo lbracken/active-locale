@@ -13,7 +13,8 @@
     "swig": "latest",
     "mongoose": "latest",
     "passport" : "latest",
-    "passport-local" : "latest"
+    "passport-local" : "latest",
+    "helmet" : "latest"
   },
   "description": "Simple, temporary location sharing",
   "main": "server.js",
