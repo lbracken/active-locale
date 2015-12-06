@@ -1,0 +1,36 @@
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>
+<section class="mdl-cell mdl-cell--4-col" data-ng-controller="GroupsController">
+
+	<h3>Create Group</h3>
+
+	<form name="groupForm" data-ng-submit="create()" novalidate autocomplete="off">
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" id="name" name="name" data-ng-model="group.name">
+			<label class="mdl-textfield__label" for="name">Group Name</label>
+		</div>
+
+		<br/>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<textarea class="mdl-textfield__input" type="text" rows= "3" id="email" name="email" data-ng-model="group.email"></textarea>
+			<label class="mdl-textfield__label" for="lastName">Email Addresses</label>
+		</div>
+
+		<br/>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<textarea class="mdl-textfield__input" type="text" rows= "3" id="sms" name="sms" data-ng-model="group.sms"></textarea>
+			<label class="mdl-textfield__label" for="username">Phone Numbers (Text Messaging)</label>
+		</div>
+
+		<br/><br/>
+		<div>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit">Create</button>
+		</div>
+	</form>
+
+	<div data-ng-show="error">
+		<h6 data-ng-bind="error"></h6>
+	</div>		
+
+</section>
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>

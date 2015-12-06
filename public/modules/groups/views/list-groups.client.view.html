@@ -1,0 +1,48 @@
+<section class="mdl-cell mdl-cell--2-col"><!-- Spacer --></section>
+<section class="mdl-cell mdl-cell--8-col" data-ng-controller="GroupsController" data-ng-init="find()">
+
+	<h3>Contact Groups</h3>
+
+	<p>
+		If you commonly share your location with the same group of people, consider creating a Contact Group.
+		Just define a set of email address and/or phone numbers (Text Messages), then you can quickly share your location with that group again and again.
+	</p>
+
+	<a href="/#!/groups/create"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="button">Create Group</button></a>
+
+	<br/><br/><br/>
+	<ul class="crud-list mdl-shadow--2dp">
+		<li data-ng-repeat="group in groups">
+			<a data-ng-href="#!/groups/{{group._id}}/edit" data-ng-bind="group.name" class="mdl-typography--display-1"></a><br/>
+			<span data-ng-bind="group.email" class="mdl-typography--subhead-color-contrast"></span><br/>
+			<span data-ng-bind="group.sms" class="mdl-typography--subhead-color-contrast"></span>
+		</li>
+	</ul>
+
+	<!-- To display groups as a table... (doesn't look good on mobile)
+	<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+		<thead></thead>
+		<tbody>
+			<tr ng-repeat="group in groups">
+				<td class="mdl-data-table__cell--non-numeric">
+					{{group.name}}
+				</td>
+				<td class="mdl-data-table__cell--non-numeric mdl-typography--caption-color-contrast">
+					{{group.email}}
+				</td>
+				<td class="mdl-data-table__cell--non-numeric mdl-typography--caption-color-contrast">
+					{{group.sms}}
+				</td>
+				<td class="mdl-data-table__cell--non-numeric">
+					<a href="#!/groups/{{group._id}}/edit">Edit Group</a>
+				</td>
+				<td class="mdl-data-table__cell--non-numeric">
+					<a href="#!/groups/{{group._id}}/edit">Delete Group</a>
+				</td>								
+			</tr>
+		</tbody>
+	</table>
+	-->
+
+</section>
+<section class="mdl-cell mdl-cell--2-col"><!-- Spacer --></section>

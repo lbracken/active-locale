@@ -10,7 +10,7 @@ var GroupSchema = new Schema({
 	name: {
 		type: String,
 		trim: true,
-		required: 'Each group must have a name'
+		required: 'Group must have a name'
 	},
 	email: {
 		type: String,	// TODO: In the future this should be an array of emails?

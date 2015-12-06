@@ -71,6 +71,19 @@ a img{
   margin: 8px 0;
 }
 
+.crud-list {
+  list-style-type: none;
+  background-color: #FFF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.crud-list li {
+  margin: 0px;
+  padding: 1.5em 2em 1.5em 2em;
+  border-bottom: 1px solid #CCC;
+}
+
 /**** Mobile layout ****/
 @media (max-width: 420px) , (max-height: 420px) {
 

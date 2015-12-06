@@ -1,0 +1,41 @@
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>
+<section class="mdl-cell mdl-cell--4-col" data-ng-controller="GroupsController" data-ng-init="findOne()">
+
+	<h3>Edit Group</h3>
+
+	<form name="groupForm" data-ng-submit="update()" novalidate autocomplete="off">
+
+		<!-- Material Design Lite text fields need to have 'is-dirty' set as an attribute if the field
+		     is populated with a value. Else MDL doesn't know that the field value changed and the 
+		     floating label will overlay on the text field -->
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" ng-class="{'is-dirty': group.name}">
+			<input class="mdl-textfield__input" type="text" id="name" name="name" data-ng-model="group.name">
+			<label class="mdl-textfield__label" for="name">Group Name</label>
+		</div>
+
+		<br/>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" ng-class="{'is-dirty': group.email}">
+			<textarea class="mdl-textfield__input" type="text" rows= "3" id="email" name="email" data-ng-model="group.email"></textarea>
+			<label class="mdl-textfield__label" for="lastName">Email Addresses</label>
+		</div>
+
+		<br/>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" ng-class="{'is-dirty': group.sms}">
+			<textarea class="mdl-textfield__input" type="text" rows= "3" id="sms" name="sms" data-ng-model="group.sms"></textarea>
+			<label class="mdl-textfield__label" for="username">Phone Numbers (Text Messaging)</label>
+		</div>
+
+		<br/><br/>
+		<div>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit">Update Group</button>
+			&nbsp;&nbsp;
+			<a href="" data-ng-click="remove();">Delete Group</a>
+		</div>
+	</form>
+
+	<div data-ng-show="error">
+		<h6 data-ng-bind="error"></h6>
+	</div>
+	
+</section>
+<section class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><!-- Spacer --></section>
