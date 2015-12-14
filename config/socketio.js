@@ -11,6 +11,7 @@ module.exports = function(server, io) {
 	});
 
 	io.on('connection', function(socket) {
-
+		// Once a connection is established, pass control to the location controller
+		require('../app/controllers/location.server.controller.js')(io, socket);
 	});
 };

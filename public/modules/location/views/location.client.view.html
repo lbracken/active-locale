@@ -1,0 +1,15 @@
+<section class="mdl-cell mdl-cell--2-col"><!-- Spacer --></section>
+<section class="mdl-cell mdl-cell--8-col" data-ng-controller="LocationController">
+
+	<h3>Location Sharing</h3>
+
+	Room: <span data-ng-bind="locationSessionId"></span>
+
+	<h5>Users</h5>
+	<div data-ng-repeat="user in users">
+		<span data-ng-bind="user.username"></span>
+		(<span data-ng-bind="user.socketId"></span>)
+	</div>
+
+</section>
+<section class="mdl-cell mdl-cell--2-col"><!-- Spacer --></section>
