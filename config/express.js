@@ -7,10 +7,14 @@ var config = require('./config'),
 	session = require('express-session'),
 	consolidate = require('consolidate'),
 	passport = require('passport'),
-	helmet = require('helmet');
+	helmet = require('helmet'),
+	http = require('http'),
+	socketio = require('socket.io');
 
 module.exports = function() {
 	var app = express();
+	var server = http.createServer(app);
+	var io = socketio.listen(server);
 
 	/*
 	 * Enable morgan as the logging module; set the configured logging mode
@@ -115,5 +119,10 @@ module.exports = function() {
 		res.status(404).render('404', {});
 	});
 
-	return app;
+	/*
+	 * Initialize the Socket.io configuration
+	 */
+	require('./socketio')(server, io);
+
+	return server;
 }

@@ -14,7 +14,8 @@
     "mongoose": "latest",
     "passport" : "latest",
     "passport-local" : "latest",
-    "helmet" : "latest"
+    "helmet" : "latest",
+    "socket.io" : "latest"
   },
   "description": "Simple, temporary location sharing",
   "main": "server.js",
