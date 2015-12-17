@@ -14,6 +14,7 @@ module.exports = function() {
 	// Required Models
 	require('../app/models/user.server.model.js');
 	require('../app/models/group.server.model.js');
+	require('../app/models/locationShare.server.model.js');
 
 	return db;
 };

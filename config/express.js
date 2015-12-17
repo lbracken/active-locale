@@ -98,6 +98,7 @@ module.exports = function() {
 	require('../app/routes/core.server.routes.js')(app);
 	require('../app/routes/users.server.routes.js')(app);
 	require('../app/routes/groups.server.routes.js')(app);
+	require('../app/routes/locationShares.server.routes.js')(app);
 
 	/*
 	 * Setup an custom error handler
